@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Multimédia e Novos Serviços</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom/shop-item.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">MNSE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="tutorial1.html">Tutorials
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="part0.html">Exercises</a>
+
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="info1.html">Info</a>
+                    <span class="sr-only">(current)</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container" style="margin-top: 50px">
+
+    <div class="row">
+
+        <div class="col-lg-3">
+            <h1 class="my-4 typewriter">Info</h1>
+            <div class="list-group">
+                <a href="info1.html" class="list-group-item active">Digitalization</a>
+                <a href="info2.html" class="list-group-item">Color Spaces</a>
+                <a href="info3.html" class="list-group-item">JPEG</a>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+            <h2 class="typewriter" style="text-align:center; margin-top: 30px;">Digitization</h2>
+            <h3 >Why do we need it?</h3>
+
+            <p >
+            Analog signals, such as sound, are continuously variable, both in the number of possible values  of the signal at a given time, as well as in the number of points in the signal in a given period of time. However, digital signals (the way things are send/stored in computers) are discrete in both of those respects – generally a finite sequence of integers – therefore a digitization can, in practical terms, only ever be an approximation of the signal it represents.<br>
+
+
+            </p>
+            <h3> How it Works?</h3>
+
+            <p>Digitalization occurs in two parts: </p>
+            <p style="font-weight: bold">Digitization</p>
+            <p style="margin-left: 20px">The reading of an analog signal A, and, at regular time intervals (frequency), sampling the value of the signal at the point. Each such reading is called a sample and may be considered to have infinite precision at this stage;</p>
+            <p style="font-weight: bold">Quantization</p>
+            <p style="margin-left: 20px">Samples are rounded to a fixed set of numbers (such as integers), a process known as quantization.</p>
+            <p style="margin-top: 30px">Now that we have seen about digitization we know that it is important to represent continuous signals with discrete variables but, how do we use it in practice? </p>
+            <h3 >The 3 Phases of Digitization:</h3>
+            <p style="margin-left: 20px">Sampling</p>
+            <p style="margin-left: 20px">Quantization</p>
+            <p style="margin-left: 20px">Codification</p>
+            <h3 >Sampling</h3>
+            <h4>Sound Sampling</h4>
+            <p>Sound sampling is a way of converting real sounds into a form that a computer can store, and replay.  Natural sound is in analogue form this means it is a sound wave and sound waves have a frequency. This frequency is measured in Hertz (Hz). If the sound oscillates at 50 times a second, then its frequency is 50Hz, and so on. The higher the frequency, the higher the pitch of the sound. <br>
+            A computer is a digital device. This means that it needs definite values (0s and 1s in the case of a computer) so we need a converter. A converter works  by "sampling" the wave at regular intervals (in this case the sound wave). At each sampling it samples the wave and turns it into a number for the computer. It does this a fixed number of times per second. This is called the sample rate.<br>
+            This method of conversion is called "successive approximation", because it keeps taking approximations of the wave.
+                <img src="https://i.stack.imgur.com/m4xb7.png" class="rounded mx-auto d-block" alt="...">
+            <br>
+            <h4>Image Sampling</h4>
+            <p>A typical approach of storing an image digitally on a computer, is by sampling the image at a rectangular grid. The color, or intensity, at each of these points is converted into a numeric value and stored in the computer. Apart from the color/intensity at those specific points, everything else is discarded when the image is stored in the computer.
+
+                <br>When displaying this digital image, we again form a continuous image by interpolating between the stored samples. </p>
+            <img src="http://i.imgur.com/oBJZcNn.png" class="rounded mx-auto d-block" alt="...">
+            <p style="margin-top: 30px">Now that we defined the needed samples we must defined how to quantify them </p>
+
+            <h3>Quantization</h3>
+            <h4>Image Quantization</h4>
+            <p> the process of converting a continuous range of values into a finite range of discreet values.[1]
+                <br>
+                As number of bits to represent a pixel intensity (assume Gray scale image for convenience) is limited, quantization is needed. Suppose 8 bit is used for a pixel, it’s equivalent value ranges from 0 to 255 (discrete values). 0 is assigned to pure Black, and 255 is assigned to pure White. Intermediate values are assigned to gray scales as shown in this image. This process is quantization. For 8 bit pixels, quantization level is 256.</p>
+            <img src="https://qph.ec.quoracdn.net/main-qimg-fce7fbf257ccdf2927fd24c9a5bcf0a7-c" class="rounded mx-auto d-block">
+            <br>
+            <h4>Sound Quantization</h4>
+            <p>Every sample is represented by an approximation of its real value. This is where the conversion into digital of an analogue signal introduces a degradation. The voltage-value gets picked up by an appropriate circuit and must then be stored on a digital support system, therefore it needs to be first converted into binary form. To do this we need to add a quantization operation which identifies a binary number as an approximation of the real value introducing an error called: quantization noise. The latter's maximum amplitude is identified with the amplitude of the quantization-interval.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/2-bit_resolution_analog_comparison.png/220px-2-bit_resolution_analog_comparison.png" class="rounded mx-auto d-block">
+            <br>
+            <h3>Nyquist frequency</h3>
+            <p>The Nyquist frequency is the bandwidth of a sampled signal, and is equal to half the sampling frequency of that signal. If the sampled signal should represent a continuous spectral range starting at 0 Hz (which is the most common case for speech recordings), the Nyquist frequency is the highest frequency that the sampled signal can unambiguously represent.</p>
+            <h4>Example</h4>
+            <p>If a speech signal is sampled at 22050 Hz, the highest frequency that we can expect to be present in the sampled signal is 11025 Hz. This means that to heed this expectation, we should run the continuous signal through a low-pass filter with a cut-off frequency below 11025 Hz; otherwise, we would experience the phenomenon of aliasing.</p>
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-4 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

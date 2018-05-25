@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Multimédia e Novos Serviços</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom/shop-item.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">MNSE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="tutorial1.html">Tutorials
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="part0.html">Exercises</a>
+
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="info1.html">Info</a>
+                    <span class="sr-only">(current)</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container" style="margin-top: 50px">
+
+    <div class="row">
+
+        <div class="col-lg-3">
+            <h1 class="my-4 typewriter">Info</h1>
+            <div class="list-group">
+                <a href="info1.html" class="list-group-item ">Digitalization</a>
+                <a href="info2.html" class="list-group-item">Color Spaces</a>
+                <a href="info3.html" class="list-group-item active">JPEG</a>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+            <h2 class="typewriter" style="text-align:center; margin-top: 30px;">JPEG</h2>
+            <h3>Introduction</h3>
+            <p>The JPEG still image compression standard was specified by a committee called the "Joint Photographic Experts Group". (I would have thought that they would have the name "Joint Photographic Experts Committee" but maybe they thought JPEC didn't sound as good as JPEG.)
+            <br>This group was set up way back in the eighties to develop a standard for encoding continuous grey scale and colour images. The JPEG ISO standard was more-or-less settled in 1991 with the aims of having 'state of the art' compression rates (circa 1991), to be useful for practically any kind of continuous tone image and be implemented on many CPU and hardware configurations.
+                To achieve this, the JPEG standard allows a number of modes of operation:<br>
+                Sequential encoding, where the image is built up spatially, top to bottom, left to right.
+            <br>Progressive encoding, where a low quality image is progressively refined with higher detail.
+            <br>Lossless encoding, for which a decompressed image is identical to the source.
+            <br>Hierarchical encoding, having the image encoding at multiple resolutions.
+
+            </p>
+            
+            <h3>Lossless Encoding</h3>
+            <p>To dispense with the simpler scheme of encoding first, I'll cover lossless encoding now. This coding scheme is rarely used in practice. In fact I wouldn't at all be surprised if many JPEG decoders can't actually handle this method and I have yet to find a program which claims to encode using the lossless method.</p>
+            <p>Lossless encoding makes use of a relatively simple prediction and differencing method. This can give around 2:1 compression on source images between 2 and 16 bits per pixel. ie. 2 - 32768 levels of grey. If the image has multiple colour components (like RGB), then each component is encoded separately.</p>
+            <p>The encoding goes like this: source images are scanned sequentially left to right, top to bottom. The value of the current pixel is predicted from the values of the previous pixels. The difference between the predicted value and the actual value is what is encoded using Huffman or arithmetic methods.</p>
+            <img src="https://www.cs.auckland.ac.nz/courses/compsci708s1c/lectures/jpeg_mpeg/images/figure_jp1.gif" class="rounded mx-auto d-block">
+            <br>
+            <p>There are 8 prediction schemes available to the encoder, although scheme 0 is reserved for the hierarchical progressive mode. Also, scheme 1 is always used for the very first scan line, and scheme 2 is used to find the first pixel on a new row. That's basically all there is to it.</p>
+            <h3>Lossy Encoding</h3>
+            <p>The lossy compression scheme is where all the action happens for JPEGs. This scheme makes use of the discrete cosine transform to convert images and compresses the resulting DCT coefficients (recall the module on Spatial and Spectral encoding). The lossy compression scheme can vary the level of compression ratio used, giving control over the final image quality (and file size, roughly). The amount of compression JPEG can supply depends almost entirely on the source image. Best results come from using images with few high frequency details.
+            </p>
+            <p>
+                The DCT is applied to 8x8 pixel blocks, this size being selected as a trade-off between computational complexity, compression speed and quality. Two methods are used in compression; the coefficients are quantised, and are then Huffman or arithmetically compressed. The quantising of the coefficients is where the lossy part of the sequence, where high frequency information is discarded.</p>
+            <br>
+            <h3>Lossy Compression Steps:</h3>
+            <p> 1. Convert non-greyscale images into YCbCr components. <br>
+                2. Downsample CbCr components. <br>
+                3. Group pixels into 8x8 blocks for processing. <br>
+                3. DCT each pixel block. <br>
+                4. Unwrap the coefficients. <br>
+                5. Scale each coefficient by a 'quantisation' factors. <br>
+                6. Eliminate near-zero coefficients. <br>
+                7. Huffman encode data. <br>
+                8. Add header info and quantisation factors. </p>
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-4 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

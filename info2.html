@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Multimédia e Novos Serviços</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom/shop-item.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">MNSE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="tutorial1.html">Tutorials
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="part0.html">Exercises</a>
+
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="info1.html">Info</a>
+                    <span class="sr-only">(current)</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container" style="margin-top: 50px">
+
+    <div class="row">
+
+        <div class="col-lg-3">
+            <h1 class="my-4 typewriter">Info</h1>
+            <div class="list-group">
+                <a href="info1.html" class="list-group-item ">Digitalization</a>
+                <a href="info2.html" class="list-group-item active">Color Spaces</a>
+                <a href="info3.html" class="list-group-item">JPEG</a>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+            <h2 class="typewriter" style="text-align:center; margin-top: 30px;">Color Spaces</h2>
+            <h3>Introduction</h3>
+            <p>Numerous models of representation of color spaces use a composition on a plane representing luminosity and two planes representing color information. The meanings and definitions of these three planes vary slightly from one model to another, but their interpretation remains more or less stable.<br>
+                The luminosity plane allows to represent the luminous intensity of a point independent of color. It thus models the functioning of the rods of the human eye. We can thus work on the brightness of a point without changing its color. This plane corresponds to the black and white version of a color image. It was really for compatibility reasons between the color and black and white screens that these types of models appeared.<br>
+                Conversely, the two color planes let you represent the tone regardless of the brightness. They are normally constructed to explore the perceptual properties of the human eye. For compression applications these types of models can be advantageous. Several studies have shown that our eye is much more sensitive to brightness information than to tone information. Thus, in the lossy compression process we can introduce many more losses in these color planes than in the plane of luminosity. This will be exploited by formats that use JPEG standards or work with indexed colors</p>
+            <br>
+            <h3>RGB Model</h3>
+            <p>This is the best known model of all. It is the one that is used for the colors of our screens or televisions. Each color is obtained by additive synthesis of the three colors
+                primary: red, green, and blue.</p>
+            <img src="https://www.researchgate.net/profile/Virginia_Ballarin/publication/239814963/figure/fig1/AS:298575935361041@1448197458584/RGB-model-representation.png" class="rounded mx-auto d-block">
+            <br>
+            <p>The colors are defined by the numerical value assigned to each primary color, i.e. by three integers. If these values are all at maximum value the resulting color is white. In contrast if the values are all null we get the color black.
+                If the value of the three primary colors is identical we obtain more or less dark gray depending on the distance of these values to the maximum.</p>
+            <br>
+            <h3>CMY Model</h3>
+            <p>The CMY model (cyan, magenta and yellow) is based on the absorption capacity of light by the printing ink deposited on the paper.
+                The color synthesis is subtractive: a part of the white light that lightens the paper is absorbed, that is, it subtracts the light reflected by the colored pigments of cyan, magenta and yellow, absorbing its complementary ones (cyan / red, magenta / green, yellow /blue).</p>
+            <p>This type of synthesis is characteristic of objects that reflect light: to obtain the desired matrices, the colors reflected by a white surface are subtracted. For this use filters
+                with the colors we want to subtract.
+                Be a white light source emitting in the direction of three cyan, magenta and yellow filters. The cyan color, being composed of green and blue lets pass these two colors, but opons to the passage of the red. The magenta color, consisting of red and blue, let these two pass through
+                colors but opposes the passage of green. In the same way the yellow filter is opposed to the blue color. The overlap of the three filters does not let pass any of the three primary colors red, green and blue.
+                The subtractive colorimeter space is suitable for the printing applications on physical media.</p>
+            <img src="https://i-technet.sec.s-msft.com/ko-kr/Dd371926.cmyclrs2(en-us,VS.85).png" class="rounded mx-auto d-block">
+            <br>
+            <p>RGB - CMY Transformation: </p>
+
+            <img src="http://www.tutorialspoint.com/dip/images/colorspaces4.jpg" class="rounded mx-auto d-block">
+            <br>
+            <h3>HSV Model (Hue, Saturation, Value)</h3>
+            <h4>H - Hue</h4>
+            <p>Represents the tone. The differences in tone depend on variations in the wavelength of light reaching the eye. The tone can be visually represented by a tone circle that goes from red to green and returns to red.</p>
+            <h4>S - Saturation</h4>
+            <p>Represents color saturation. This is measured in terms of the difference between a color and a gray with the same level of brightness. The lower the saturation, the more gray the color. When the saturation is zero the color is gray.</p>
+            <h4>V - Value</h4>
+            <p>Representing the luminous intensity. The brightness is determined by the degree of reflectivity of the light-receiving physical surface. The brighter the lighter the color.</p>
+            <img src="https://www.hindawi.com/journals/tswj/2013/105945.fig.001.jpg" class="rounded mx-auto d-block">
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-4 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Multimédia e Novos Serviços</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+   <link href="css/custom/shop-item.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">MNSE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="tutorial1.html">Tutorials
+				<span class="sr-only">(current)</span>	
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="part0.html">Exercises</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="info1.html">Info</a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+          <h1 class="my-4 typewriter">Tutorials</h1>
+          <div class="list-group">
+            <a href="tutorial1.html" class="list-group-item">Tutorial 1</a>
+            <a href="tutorial2.html" class="list-group-item active">Tutorial 2</a>
+          </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+		
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Details</h2>
+			<p>In this tutorial we are going to focus mainly on the color space HSV.</p>
+			<p>The objective is to introduce you different representations of digital visual signals and to some basic visual processing techniques using Matlab.</p>
+			<p>Matlab scripts/images can be seen on the bottom of the video and can be downloaded bellow. The output will consist of processed versions of those images, which we’re going to analyse with you to interpret the effects of the conducted processing operations.</p>
+			<br />
+			<p><b>Note:</b> The majority of the images has the bitmap format (.bmp) which means that each pixel is represented by three RGB eight bit values, so in total 24 bits per pixel. 
+</p>
+			
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Video</h2>
+			<video width="640" height="360" controls>
+			  <source src="./Tutorial/Tutorial2.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+			
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Code</h2>
+			<div class="card">
+			  <div class="card-body">
+				<pre><code>
+			function [] = tutorial2(in,out)
+
+			[~,name,ext] = fileparts(in);
+
+			rgb = imread(in);
+			if size(rgb,3) ~= 3
+				rgb = cat(3,rgb,rgb,rgb);
+			end
+
+			figure(1),imshow(rgb),title('RGB');
+			imwrite(rgb,strcat(out,name,'-','rgb',ext));
+			
+			hsv = rgb2hsv(rgb);
+			figure(2),imshow(hsv),title('HSV');
+			imwrite(hsv,strcat(out,name,'-','hsv',ext));
+
+			h = hsv(:,:,1);
+			figure(3),imshow(h),title('Hue');
+			imwrite(h,strcat(out,name,'-','h',ext));
+
+			s = hsv(:,:,2);
+			figure(4),imshow(s),title('Saturation');
+			imwrite(s,strcat(out,name,'-','s',ext));
+
+			v = hsv(:,:,3);
+			figure(5),imshow(v),title('Value');
+			imwrite(v,strcat(out,name,'-','v',ext));
+				</code></pre>
+
+			  </div>
+			</div>
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

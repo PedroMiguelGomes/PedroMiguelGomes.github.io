@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">	
+	
+    <title>Multimédia e Novos Serviços</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+   <link href="css/custom/shop-item.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+	<script>
+		function myFunction(ID) {
+
+			var x = document.getElementById("myDIV" + ID);
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+</script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">MNSE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tutorial1.html">Tutorials</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="exercise1.html">Exercises
+				<span class="sr-only">(current)</span>	
+			  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="info1.html">Info</a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+          <h1 class="my-4 typewriter">Exercises</h1>
+          <div class="list-group">
+            <a href="part0.html" class="list-group-item active">Level 0</a>
+            <a href="part1.html" class="list-group-item">Level 1</a>
+          </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+		
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Simple Exercises</h2>
+			
+			
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Exercise 1</h2>
+			<p><b>What are the differences between analog signals and digital signals?</b></p>
+			
+			<button onclick="myFunction(1)">Solution</button>
+
+			<div style = "display: none; width: 100%; padding: 50px 0;text-align: center; background-color: lightblue; margin-top: 20px;" id="myDIV1">
+			<p>Analog Signals — continuous signals of some time varying quantities; can’t be processed directly by computers</p>
+			<p>Digital Signals — digital samples of the signals at regular interval; can be readily processed by computers</p>
+			</div>
+			
+			
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Exercise 2</h2>
+			<p><b>Audio signals are often sampled at different rates. CD quality audio is sampled at 44.1kHz rate while telephone quality audio sampled at 8kHz.</b></p>
+			<p><b>What are the maximum frequencies in the input signal that can be fully recovered for these two sampling rates? Briefly describe the theory you use to obtain the results?</b></p>
+			
+			<button onclick="myFunction(2)">Solution</button>
+
+			<div style = "display: none; width: 100%; padding: 50px 0;text-align: center; background-color: lightblue; margin-top: 20px;" id="myDIV2">
+			<p>CD quality audio, the maximum frequency: 44,100Hz / 2 = 22,050Hz</p>
+			<p>Telephone quality audio, the maximum frequency: 8kHz / 2 = 4kHz.</p>
+			<p>This is based on Nyquist theorem: the sampling frequency for a signal must be at least twice the highest frequency component in the signal.</p>
+			</div>
+			
+			
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Exercise 3</h2>
+			<p><b>A computer is to be used to add effects to analog audio signals. </b></p>
+			<p><b>What two types of devices in general are needed? Describe their functionalities in the processing pipeline.</b></p>
+			
+			<button onclick="myFunction(3)">Solution</button>
+
+			<div style = "display: none; width: 100%; padding: 50px 0;text-align: center; background-color: lightblue; margin-top: 20px;" id="myDIV3">
+			<p>Analog-to-Digital Converter (ADC) : take analog signals from analog sensor and digitally sample data.</p>
+			<p>Digital-to-Analog Converter (DAC) : take digital signals from computer and outputs an analog signal that may be displayed by output device.</p>
+			</div>
+			
+			
+			
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

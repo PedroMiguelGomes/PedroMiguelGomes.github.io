@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">	
+	
+    <title>Multimédia e Novos Serviços</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+   <link href="css/custom/shop-item.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+	<script>
+		function myFunction(ID) {
+
+			var x = document.getElementById("myDIV" + ID);
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+</script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">MNSE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tutorial1.html">Tutorials</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="exercise1.html">Exercises
+				<span class="sr-only">(current)</span>	
+			  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="info1.html">Info</a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+          <h1 class="my-4 typewriter">Exercises</h1>
+          <div class="list-group">
+            <a href="part0.html" class="list-group-item">Level 0</a>
+            <a href="part1.html" class="list-group-item active">Level 1</a>
+          </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+		
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Graphic/Image Data Representation</h2>
+			
+			
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Exercise 1</h2>
+			<p><b>Briefly explain why we need to be able to have less than 24-bit color and why this makes for a problem.</b></p>
+			<p><b>Generally, what do we need to do to adaptively transform 24-bit color values to 8-bit ones?</b></p>
+			
+			<button onclick="myFunction(1)">Solution</button>
+
+			<div style = "display: none; width: 100%; padding: 50px 0;text-align: center; background-color: lightblue; margin-top: 20px;" id="myDIV1">
+			<p>May not be able to handle such large file sizes or not have 24-bit displays.</p>
+			<p>The colors will be somewhat wrong, however.</p>
+			<p>We need to cluster color pixels so as to best use the bits available to be as accurate as possible for the colors in an image.</p>
+			</div>
+			
+			
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Exercise 2</h2>
+			<p><b>Suppose we decide to quantize an 8-bit grayscale image down to just 2 bits of accuracy. What is the simplest way to do so? What ranges of byte values in the original image are mapped to what quantized values?</b></p>
+			
+			<button onclick="myFunction(2)">Solution</button>
+
+			<div style = "display: none; width: 100%; padding: 50px 0;text-align: center; background-color: lightblue; margin-top: 20px;" id="myDIV2">
+			<p>Just use the first 2 bits in the grayscale value.</p>
+			<p>I.e., any values in the ranges</p>
+			<p>0000 0000 to 0011 1111</p>
+			<p>0100 0000 to 0111 1111</p>
+			<p>1000 0000 to 1011 1111</p>
+			<p>1100 0000 to 1111 1111</p>
+			<p>are mapped into 4 representative grayscale values.</p>
+			<p>In decimal, these ranges are:</p>
+			<p>0 to (2ˆ6-1)</p>
+			<p>2ˆ6 to (2ˆ7-1)</p>
+			<p>2ˆ7 to 2ˆ7 + (2ˆ6-1)</p>
+			<p>2ˆ7 + 2ˆ6 to (2ˆ8-1)</p>
+			<p>i.e.,</p>
+			<p>0 to 63</p>
+			<p>64 to 127</p>
+			<p>128 to 191</p>
+			<p>192 to 255</p>
+			<p>Then reconstruction values should be taken as the middle</p>
+			<p>of these ranges; i.e.,</p>
+			<p>32</p>
+			<p>96</p>
+			<p>160</p>
+			<p>224</p>
+			</div>
+			
+			
+			<h2 class="typewriter" style="text-align:center; margin-top: 30px;">Exercise 3</h2>
+			<p><b>Suppose we have available 24 bits per pixel for a color image. However, we notice that humans are more sensitive to R and G than to B — in fact, 1.5 times more sensitive to R or G than to B.</b></p>
+			<p><b>How could we best make use of the bits available?</b></p>
+			
+			<button onclick="myFunction(3)">Solution</button>
+
+			<div style = "display: none; width: 100%; padding: 50px 0;text-align: center; background-color: lightblue; margin-top: 20px;" id="myDIV3">
+			<p>ratio is 3:3:2, so use bits 9:9:6 for R:G:B.</p>
+			</div>
+			
+			
+			
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
