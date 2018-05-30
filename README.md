@@ -1,62 +1,24 @@
-# [Start Bootstrap - Shop Item](https://startbootstrap.com/template-overviews/shop-item/)
+# [MNSE](https://pedromiguelgomes.github.io/)
 
-[Shop Item](http://startbootstrap.com/template-overviews/shop-item/) is a basic HTML store item template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
-## Preview
+## How access our project?
+Simply click in this [link](https://pedromiguelgomes.github.io/)
 
-[![Shop Item Preview](https://startbootstrap.com/assets/img/templates/shop-item.jpg)](https://blackrockdigital.github.io/startbootstrap-shop-item/)
+## How to use this project locally and see the code 
+In this page  you can see a green button called "clone or download" (it's the only green button in this page). When you find it, click it!
+A dropdown will open and you will be able to download the a zip file with all files.
+After download the zip file you will find all the files.
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-shop-item/)**
+## Wich is the best way to contribute to this project
+1. Login into your github account
+2. After login into your account come back to this page and click in button "Fork" below your profile picture
+3. After the last step, you will have a copy of this project in your account (this ensures that any modification you do will not affect this project unless we allow it)
+4. To change the code of your copy you must download it and change it, the simpliest way we advice is to install "git" and run the following commands: 
+To download:
+*  git clone <link of your repository displayed in button "clone or download"><br />
+To upload changes:
+*  git add .
+*  git commit -m "description of changes"
+*  git push origin master
 
-## Status
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-shop-item/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-shop-item.svg)](https://www.npmjs.com/package/startbootstrap-shop-item)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-shop-item.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-shop-item)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-shop-item/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-shop-item)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-shop-item/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-shop-item?type=dev)
-
-## Download and Installation
-
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/shop-item/)
-* Install via npm: `npm i startbootstrap-shop-item`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-shop-item.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-shop-item)
-
-## Usage
-
-### Basic Usage
-
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
-
-### Advanced Usage
-
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-shop-item/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/shop-item/).
-
-## Custom Builds
-
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/gh-pages/LICENSE) license.
+5. After all changes are uploaded to your copy of this project you can request a merge of both repositories so that your changes can become an enhancement. To do this, click in button "new pull request" in your copy of this project and if everything is ok, we will accept your changes and make public 
